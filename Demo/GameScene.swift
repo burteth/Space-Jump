@@ -108,7 +108,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if isKeyPresentInUserDefaults(key: "Shuttle") {
         if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Orange"{
              player = SKSpriteNode(imageNamed: "shuttle")
-             player.setScale(1)
+             player.setScale(0.85)
         }
         else if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Green"{
             player = SKSpriteNode(imageNamed: "Rocket_Green")
@@ -510,7 +510,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
     
     let wall2 = SKSpriteNode(imageNamed: walls[0])
-    let Wall2Position = position + wall.size.width + 150
+    let Wall2Position = position + wall.size.width + 110
     wall2.position = CGPoint(x: Wall2Position, y: self.frame.size.height + wall2.size.height)
     wall2.setScale(0.42)
     wall2.physicsBody = SKPhysicsBody(rectangleOf: wall2.size)

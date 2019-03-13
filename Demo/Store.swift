@@ -81,22 +81,22 @@ class Store: SKScene {
         GreenCheck.size = CGSize(width: 30, height: 30)
         
         if isKeyPresentInUserDefaults(key: "Shuttle") {
-            if UserDefaults.standard.string(forKey: "Shuttle") == "White_Rocket" {
+            if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Orange" {
                 GreenCheck.position = CGPoint(x: BarrierForShips_1.position.x - 1000, y: BarrierForShips_1.position.y + 100)
                 
-            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Green_Rocket" {
+            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Green" {
                 GreenCheck.position = CGPoint(x: BarrierForShips_2.position.x  - 100, y: BarrierForShips_2.position.y + 100)
                 
-            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Blue_Rocket" {
-                GreenCheck.position = CGPoint(x: BarrierForShips_3.position.x - 100, y: BarrierForShips_3.position.y + 100)
+            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Blue" {
+                GreenCheck.position = CGPoint(x: BarrierForShips_3.position.x - 20, y: BarrierForShips_3.position.y + 20)
                 
-            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Red_Rocket" {
+            }else if UserDefaults.standard.string(forKey: "Shuttle") == "Rocket_Red" {
                 GreenCheck.position = CGPoint(x: BarrierForShips_4.position.x - 100, y: BarrierForShips_4.position.y  + 100)
                 
             }
         }else{
             
-            GreenCheck.position = CGPoint(x: -1000, y: -1000)
+            GreenCheck.position = CGPoint(x: -100000, y: -100000)
         }
         self.addChild(GreenCheck)
         
@@ -126,20 +126,20 @@ class Store: SKScene {
             {
                 
                   UserDefaults.standard.set("Rocket_Orange", forKey: "Shuttle")
-                 GreenCheck.position = CGPoint(x: BarrierForShips_1.position.x + BarrierForShips_1.size.width - 10, y: BarrierForShips_1.position.y - BarrierForShips_1.size.width + 10)
+                 GreenCheck.position = CGPoint(x: BarrierForShips_1.position.x + (BarrierForShips_1.size.width/2) - 10, y: BarrierForShips_1.position.y - (BarrierForShips_1.size.height/2) + 10)
                 
                 
             }else if touchLocation.x > (BarrierForShips_2.position.x - (BarrierForShips_2.size.width/2)) && touchLocation.x < (BarrierForShips_2.position.x + (BarrierForShips_2.size.width/2)) && touchLocation.y < (BarrierForShips_2.position.y + (BarrierForShips_2.size.height/2)) && touchLocation.y > (BarrierForShips_2.position.y - (BarrierForShips_2.size.height/2)){
                 
                 
                 UserDefaults.standard.set("Rocket_Green", forKey: "Shuttle")
-                  GreenCheck.position = CGPoint(x: BarrierForShips_2.position.x + BarrierForShips_2.size.width - 10, y: BarrierForShips_2.position.y - BarrierForShips_2.size.width + 10)
+                  GreenCheck.position = CGPoint(x: BarrierForShips_2.position.x + (BarrierForShips_2.size.width/2) - 10, y: BarrierForShips_2.position.y - (BarrierForShips_2.size.height/2) + 10)
                 
                 
             }else if touchLocation.x > (BarrierForShips_3.position.x - (BarrierForShips_3.size.width/2)) && touchLocation.x < (BarrierForShips_3.position.x + (BarrierForShips_3.size.width/2)) && touchLocation.y < (BarrierForShips_3.position.y + (BarrierForShips_3.size.height/2)) && touchLocation.y > (BarrierForShips_3.position.y - (BarrierForShips_3.size.height/2)){
                 
                 UserDefaults.standard.set("Rocket_Blue", forKey: "Shuttle")
-                GreenCheck.position = CGPoint(x: BarrierForShips_3.position.x + BarrierForShips_3.size.width - 10, y: BarrierForShips_3.position.y - BarrierForShips_3.size.width + 10)
+                GreenCheck.position = CGPoint(x: BarrierForShips_3.position.x + (BarrierForShips_3.size.width/2) - 10, y: BarrierForShips_3.position.y - (BarrierForShips_3.size.height/2) + 10)
                 
                 
                 
@@ -147,7 +147,7 @@ class Store: SKScene {
             {
                 
                 UserDefaults.standard.set("Rocket_Red", forKey: "Shuttle")
-                 GreenCheck.position = CGPoint(x: BarrierForShips_4.position.x + BarrierForShips_4.size.width - 10, y: BarrierForShips_4.position.y - BarrierForShips_4.size.width + 10)
+                 GreenCheck.position = CGPoint(x: BarrierForShips_4.position.x + (BarrierForShips_4.size.width/2) - 10, y: BarrierForShips_4.position.y - (BarrierForShips_4.size.height/2) + 10)
                 
                 
             }
