@@ -7,6 +7,7 @@
 # Space-Jump
 -A space themed scrolling game made in Swift
 
+![](https://github.com/burteth/Space-Jump/blob/master/Screenshots/Space-Jump_Video.gif)
 ![](https://github.com/burteth/Space-Jump/blob/master/Screenshots/Space-Jump_V2.gif)
 
 # Requirements
