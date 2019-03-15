@@ -594,7 +594,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         
-    let Planet_Frequency =  GKRandomDistribution(lowestValue: 0, highestValue: 7)
+    let Planet_Frequency =  GKRandomDistribution(lowestValue: 0, highestValue: 4)
     let Planet_Frequency_V2 = CGFloat(Planet_Frequency.nextInt())
         if (Planet_Frequency_V2 == 0)
         {
@@ -602,7 +602,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     Planets = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: Planets) as! [String]
         
     let Planet = SKSpriteNode(imageNamed: Planets[0])
-    let Planet_Position_x =   GKRandomDistribution(lowestValue: 30, highestValue: 700)
+    let Planet_Position_x =   GKRandomDistribution(lowestValue: 30, highestValue: 500)
     let Planet_Position_x_V2 = CGFloat(Planet_Position_x.nextInt())
     Planet.position = CGPoint(x: Planet_Position_x_V2, y: 667 + Planet.size.height)
     Planet.physicsBody = SKPhysicsBody(rectangleOf: Planet.size)
